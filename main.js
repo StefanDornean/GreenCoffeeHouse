@@ -1159,6 +1159,228 @@ let InMemoryDataService = class InMemoryDataService {
       images
     };
   }
+  createDbEN() {
+    const about = {
+      id: 1,
+      name: 'Despre Noi',
+      tagline: 'SUCCESS',
+      title: 'Despre noi',
+      description: ['Fie că o parte din suflet ați lăsat-o demult pe malurile Dunării, fie că ați cunoscut Sulina doar din paginile romanului lui Jean Bart, vă provocăm să uitați de freamătul marilor orașe, de grijile cotidiene și să vă lăsați purtați pe valurile Dunării până aproape de vărsarea ei în Marea Neagră, pe aleea Europolis 60.', 'Uitați de voi și acceptați invitația noastră la o ceașcă aromată de cafea, la o vorbă bună, la momente de relaxare și liniște... Lăsați în urmă grijile și frământările zilnice și bucurați-vă de peisajul de basm, de zilele însorite și redesoperiți starea de bine trecându-ne pragul...', 'Vă oferim condiții excelente de cazare, vă recomandăm cei mai ospitalieri localnici, cele mai gustoase preparate și modalități personalizate de petrecere a timpului liber, toate pentru a vă ajuta să trăiți farmecul de altădată al acestui oraș unic în lume...'],
+      images: ['assets/images/green-coffee-house/IMG_2010.jpg', 'assets/images/green-coffee-house/IMG_2012.jpg', 'assets/images/green-coffee-house/IMG_2014.jpg', 'assets/images/green-coffee-house/IMG_2016.jpg', 'assets/images/green-coffee-house/IMG_2035.jpg']
+    };
+    const photoGallery = ['assets/images/green-coffee-house/exterior.jpg', 'assets/images/green-coffee-house/exterior-1.jpg', 'assets/images/green-coffee-house/exterior-2.jpg', 'assets/images/green-coffee-house/exterior-3.jpg', 'assets/images/green-coffee-house/exterior-4.jpg', 'assets/images/green-coffee-house/exterior-5.jpg', 'assets/images/green-coffee-house/exterior-6.jpg', 'assets/images/green-coffee-house/exterior-7.jpg', 'assets/images/green-coffee-house/exterior-8.jpg', 'assets/images/green-coffee-house/exterior-9.jpg', 'assets/images/green-coffee-house/exterior-10.jpg', 'assets/images/green-coffee-house/exterior-11.jpg', 'assets/images/green-coffee-house/interior.jpg', 'assets/images/green-coffee-house/interior-1.jpg', 'assets/images/green-coffee-house/interior-2.jpg', 'assets/images/green-coffee-house/interior-3.jpg', 'assets/images/green-coffee-house/interior-4.jpg', 'assets/images/green-coffee-house/restaurant.jpg', 'assets/images/green-coffee-house/restaurant1.jpg'];
+    const offer = {
+      doubleRoom: {
+        title: 'Cameră dublă',
+        mainimg: 'assets/images/green-coffee-house/dubla1.jpg',
+        images: ['assets/images/green-coffee-house/dubla2.jpg', 'assets/images/green-coffee-house/camera-1.jpg', 'assets/images/green-coffee-house/camera-2.jpg', 'assets/images/green-coffee-house/camera-2-1.jpg', 'assets/images/green-coffee-house/camera-3.jpg', 'assets/images/green-coffee-house/camera-4.jpg', 'assets/images/green-coffee-house/camera-matrimoniala.jpg', 'assets/images/green-coffee-house/baie.jpg',
+        // 'assets/images/green-coffee-house/baie1.jpg',
+        // 'assets/images/green-coffee-house/baie-2.jpg',
+        // 'assets/images/green-coffee-house/baie-3.jpg',
+        'assets/images/green-coffee-house/baie-4.jpg', 'assets/images/green-coffee-house/balcon.jpg', 'assets/images/green-coffee-house/balcon2.jpg']
+      },
+      twinRoom: {
+        title: 'Cameră twin',
+        mainimg: 'assets/images/green-coffee-house/twin.jpg',
+        images: ['assets/images/green-coffee-house/camera-twin.jpg', 'assets/images/green-coffee-house/camera-twin1.jpg', 'assets/images/green-coffee-house/camera-twin2.jpg', 'assets/images/green-coffee-house/camera-twin3.jpg', 'assets/images/green-coffee-house/twin3.jpg', 'assets/images/green-coffee-house/twin4.jpg', 'assets/images/green-coffee-house/baie.jpg',
+        // 'assets/images/green-coffee-house/baie1.jpg',
+        // 'assets/images/green-coffee-house/baie-2.jpg',
+        // 'assets/images/green-coffee-house/baie-3.jpg',
+        'assets/images/green-coffee-house/baie-4.jpg', 'assets/images/green-coffee-house/balcon.jpg', 'assets/images/green-coffee-house/balcon2.jpg']
+      },
+      description1: ['Camerele spațioase, mobilate elegant, cu plase de țânțari și obloane, beneficiază de serviciu zilnic de menaj.', 'Prosoapele şi lenjeria de pat sunt incluse în tarif. Pentru un plus de confort, există articole de toaletă gratuite şi uscător de păr.'],
+      description2: ['Orice tip de pat suplimentar sau pătuţ de copil este furnizat la cerere şi trebuie să fie confirmat de hotel. Suplimentele nu sunt calculate automat în preţul total şi vor fi plătite separat în timpul sejurului.', 'Prețul include și micul dejun.'],
+      prices: [{
+        dates: '01.05 – 15.06',
+        price: '380',
+        other: '*mic dejun inclus'
+      }, {
+        dates: '16.06 – 31.08',
+        price: '480',
+        other: '*mic dejun inclus'
+      }, {
+        dates: '31.08 - 30.09',
+        price: '380',
+        other: '*mic dejun inclus'
+      }],
+      facilities: [{
+        name: 'Aer condiționat',
+        icon: ''
+      }, {
+        name: 'Baie privată cu duș',
+        icon: ''
+      }, {
+        name: 'TV Led',
+        icon: ''
+      }, {
+        name: 'WiFi',
+        icon: ''
+      }, {
+        name: 'Minibar',
+        icon: ''
+      }, {
+        name: 'Vedere la mare',
+        icon: ''
+      }]
+    };
+    const pages = [{
+      id: 1,
+      name: 'Despre Noi',
+      tagline: 'SUCCESS',
+      title: 'Deespre noi',
+      description: ['Fie că o parte din suflet ați lăsat-o demult pe malurile Dunării, fie că ați cunoscut Sulina doar din paginile romanului lui Jean Bart, vă provocăm să uitați de freamătul marilor orașe, de grijile cotidiene și să vă lăsați purtați pe valurile Dunării până aproape de vărsarea ei în Marea Neagră, pe aleea Europolis 60.', 'Uitați de voi și acceptați invitația noastră la o ceașcă aromată de cafea, la o vorbă bună, la momente de relaxare și liniște... Lăsați în urmă grijile și frământările zilnice și bucurați-vă de peisajul de basm, de zilele însorite și redesoperiți starea de bine trecându-ne pragul...', 'Vă oferim condiții excelente de cazare, vă recomandăm cei mai ospitalieri localnici, cele mai gustoase preparate și modalități personalizate de petrecere a timpului liber, toate pentru a vă ajuta să trăiți farmecul de altădată al acestui oraș unic în lume...', '200m până pe plajă', '1500m până pe faleza orașului Sulina']
+    }, {
+      id: 2,
+      name: 'clients',
+      tagline: 'TRUST',
+      title: 'Companies who use our services',
+      description: ['Proprietatea asigură parcare privată gratuită non-stop, cât și check-in/check-out express, iar recepția este deschisă non-stop.', 'Internetul wireless este disponibil atât în zonele publice, cât și în camere şi este gratuit.', 'Oaspeții au la dispoziție o terasă liniștită și elegantă, un lounge comun pentru relaxare și luat masa în interior, dotat cu TV cu ecran plat cu canale prin cablu.', 'Mic dejun disponibil: bufet.', 'De asemenea, un automat pentru cafea este disponibil non-stop.', 'Animalele de companie nu sunt acceptate.', 'Toate camerele sunt spațioase, mobilate elegant, au aer condiționat, TV cu ecran plat cu programe prin cablu, minibar, baie privată cu duş, balcon, plase de țânțari și obloane și beneficiază de serviciu zilnic de menaj. Prosoapele şi lenjeria de pat sunt incluse în tarif. Pentru un plus de confort, există articole de toaletă gratuite şi uscător de păr.', 'Toţi copiii sunt bineveniţi.', 'Gratuit! Un copil cu vârsta între 0 şi 12 ani stă gratuit când sunt folosite paturile existente.', 'Gratuit! Un copil cu vârsta până la 2 ani stă gratuit dacă foloseşte un pătuţ.', 'Suplimentele nu sunt calculate automat în preţul total şi vor fi plătite separat în timpul sejurului.', 'La cerere și la un cost suplimentar, se pot organiza excursii în Biosfera Delta Dunării, excursii de pescuit sau de observare a păsărilor, tururi cu șalupa sau catamaranul și închirieri de biciclete.', 'Grupuri:', 'Dacă se rezervă mai mult de 9 camere, se pot aplica politici diferite şi condiţii suplimentare .', 'Terasă', 'Loc de joacă', 'TV HD', 'Wireless']
+    }, {
+      id: 3,
+      name: 'services',
+      tagline: 'BELIEVING',
+      title: 'Focusing On What Matters Most',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam!'
+    }, {
+      id: 4,
+      name: 'testimonials',
+      tagline: 'FEEDBACK',
+      title: 'What our customers are saying',
+      description: ''
+    }, {
+      id: 5,
+      name: 'pricing',
+      tagline: 'YOUR CHOICE',
+      title: 'We have the right package for you',
+      description: ''
+    }, {
+      id: 6,
+      name: 'footer',
+      tagline: 'Made with ❤ by SculptCode',
+      developer: 'SculptCode',
+      developerlink: 'sculptcode.com'
+    }, {
+      id: 7,
+      name: 'header',
+      tagline: 'GREEN COFEE HOUSE',
+      title: 'Uitați de voi și acceptați invitația noastră la o ceașcă aromată de cafea, la o vorbă bună, la momente de relaxare și liniște... Lăsați în urmă grijile și frământările zilnice și bucurați-vă de peisajul de basm, de zilele însorite și redescoperiți starea de bine trecându-ne pragul.',
+      buttontext: 'Contactează-ne!',
+      buttonlink: '/home',
+      image: 'bg-web-3.jpg'
+    }];
+    const attractions = [{
+      id: 1,
+      name: 'Catedrala Sfântul Alexandru',
+      description: ['Catedrala ortodoxă din Alexandria, județul Teleorman, cu hramul „Sfântul Alexandru”, a fost construită în perioada 1869 - 1898. Este realizată în stil bizantino-romanic. Prăznuit pe 30 august, sfântul Alexandru a fost episcop la Constantinopol sub domnia împăratului Constantin cel Mare (313-337), luând parte la sinodul ecumenic de la Niceea în anul 325.', 'Picturile murale interioare în ulei au fost realizate în anul 1898 de către o echipă formată din Constantin Artachino, Constantin Pascali și Ștefan Luchian. Picturile au fost executate în stil bizantin, iar catapeteasma a fost realizată în stil neogotic, având înălțimea de 10 metri.. După cutremurul din 1940, frescele au fost restaurate de pictorii Constantin Artachino și Ștefan Panciu.', 'Inițial a fost construită din lemn, în 1836, la doi ani de la înființarea orașului de către domnitorul Țării Românești, Alexandru D. Ghica (aprilie 1834 - 7 octombrie 1842). Până în 1996 a funcționat ca Biserica Sf. Alexandru. Din 1996 a devenit catedrală episcopală. DIn anul 2004 a fost clasată ca monument istoric, cod LMI TR-II-m-A-14255.'],
+      pictures: ['assets/images/green-coffee-house/Alexandria_Catedrala.jpg']
+    }, {
+      id: 2,
+      name: 'Delta Dunării',
+      description: ['La 50 de metri de Green Coffee House este punctul de întâlnire cu "Domnul Edy". Cu el veți porni în aventură pe canalele Dunării... Când? Unde? Care? Cum? Totul se stabilește la o ceașcă de cafea, pe terasa Green Coffee House. Credem că tu ești cel care trebuie să decidă ora plecării, durata și destinația. Odată stabilite detaliile aventurii, uitați de griji, de frământările zilnice și bucurați-vă de peisajul de basm, de zilele însorite, lăsându-vă purtați pe valurile Dunării...'],
+      pictures: ['assets/images/green-coffee-house/Delta_Dunarii_500.jpg']
+    }, {
+      id: 3,
+      name: 'Pădurea Letea',
+      description: ['Pădurea Letea ( 2825 ha ) : Pădurea Letea este situată în partea de nord a Deltei, la est de comuna C.A.Rosetti. Zona strict protejată cuprinde doar o parte din suprafața totală a pădurii, parte ce a fost pusă sub ocrotire încă din anul 1930 și devenită rezervație naturală începând cu 1938.', 'Pădurea s-a dezvoltat sub forma unor fâșii late (“hasmacuri”) în spațiile dintre dunele de nisip și este formată din stejar de lunca, stejar brumariu, plop alb, frasin de lunca, tei alb.', 'O caracteristică a pădurii o constituie abundența de plante cataratoare: vița sălbatică, hameiul, curpenul de pădure și nu în ultimul rând liana grecească (Periploca graeca), cea care dă pădurii un aspect mediteranean. Totodată, aici au fost identificate peste 2.000 de specii de insecte, vipera de nisip (Vipera ursinii), vulturul codalb (Haliaeetus albicilla) - care cuibărește aici, trei specii de șoim, corbul, etc.', 'Toate aceste specii de plante și animale, unele dintre ele foarte rare sau cu caracteristici deosebite au făcut ca această pădure să necesite o atenție deosebită pentru conservarea și păstrarea valorilor ei naturale.'],
+      pictures: ['assets/images/green-coffee-house/padurea-letea.jpg']
+    }, {
+      id: 4,
+      name: 'Parcul AFDJ',
+      description: ['Palatul Comisiei Europene a Dunării este un monument istoric situat pe Strada I din orașul Sulina, România. Palatul a fost sediul Comisiunii Europene a Dunării până în anul 1921, intrând apoi în administrarea statului român. Clădirea este acum sediul Secției Căilor Navigabile Sulina din cadrul Administrației Fluviale a Dunării de Jos.', 'Construcția palatului a fost demarată de Comisiunea Europeană a Dunării în anul 1860 și s-a încheiat în 1868. Scopul ridicării clădirii era de a găzdui membrii Comisiei precum și activitatea Secretariatului General al acesteia. De-a lungul timpului, palatul a avut parte de mai multe renovări.', 'În 1917, în timpul Primului Război Mondial, palatul a fost grav afectat de bombardamentele armatei germane. După război clădirea a fost refăcută și a continuat să fie administrată de Comisia Dunării până în 1921, când a intrat în patrimoniul statului român. Ea a fost reproiectată între anii 1922 – 1923, când a fost reconstruită pe o fundație de piatră și cu ziduri din cărămidă și cuprindea un subsol, o mansardă și două etaje.'],
+      pictures: ['assets/images/green-coffee-house/parcul-afdj.jpg']
+    }, {
+      id: 5,
+      name: 'Plaja Sulina',
+      description: ['Situată la numai 200 de metri de Green Coffee House, plaja Sulina este locul ideal unde îți poți petrece o zi de vacanță... sau chiar mai multe. Cât e ziua de lungă te poți relaxa la soare, pe nisipul fin, sau pe șezlong, la umbră. Seara te poți distra la o petrecere pe plajă sau la un foc de tabără, iar dacă te prinde dimineața tot aici, poți începe ziua cu o alergare ușoară, o baie în mare sau o sesiune de yoga la răsărit.', 'Situată la aproximativ 3km de orașul Sulina, poți ajunge pe jos în 20-30 de minute, sau cu maxi-taxi, pe un drum ce seamănă cu un drum prin preerie. Nisipul este fin, apa mării este mică ca adâncime până în larg și este foarte limpede, lipsită de alge.', 'Plaja Sulina, este o zonă de importanță ecologică, aici se dezvoltă volbura de nisip, o plantă de pe lista roșie a speciilor protejate.', 'Anul acesta, se pare că prin Proiectul de amenajare a plajei de la Sulina se va compromite unicitatea acestui loc. Se ajunge cu un mijloc de transport naval din Tulcea până în localitatea Sulina și apoi la picior sau cu maxi-taxi până la plajă.'],
+      pictures: ['assets/images/green-coffee-house/plaja-sulina.jpg']
+    }];
+    const images = [{
+      id: 1,
+      name: 'gallery-image-1.jpg'
+    }, {
+      id: 2,
+      name: 'gallery-image-2.jpg'
+    }, {
+      id: 3,
+      name: 'gallery-image-3.jpg'
+    }, {
+      id: 4,
+      name: 'gallery-image-4.jpg'
+    }, {
+      id: 5,
+      name: 'gallery-image-5.jpg'
+    }, {
+      id: 6,
+      name: 'gallery-image-6.jpg'
+    }];
+    const menu = [{
+      id: 2,
+      pageId: "about",
+      title: 'Despre Noi',
+      type: 1,
+      link: '/about'
+    }, {
+      id: 3,
+      pageId: "offer",
+      title: 'Ofertă',
+      type: 1,
+      link: '/services'
+    }, {
+      id: 4,
+      pageId: "home",
+      title: 'Logo',
+      type: 2,
+      logoImg: 'assets/images/logo.png',
+      link: '/home'
+    }, {
+      id: 5,
+      pageId: "attractions",
+      title: 'Atracții',
+      type: 1,
+      link: '/gallery'
+    }, {
+      id: 6,
+      pageId: "contact",
+      title: 'Contact',
+      type: 1,
+      link: '/testimonials'
+    }];
+    const menuToggle = [{
+      id: 2,
+      pageId: "about",
+      title: 'Despre Noi',
+      type: 1,
+      link: '/about'
+    }, {
+      id: 3,
+      pageId: "offer",
+      title: 'Ofertă',
+      type: 1,
+      link: '/services'
+    }, {
+      id: 5,
+      pageId: "attractions",
+      title: 'Atracții',
+      type: 1,
+      link: '/gallery'
+    }, {
+      id: 6,
+      pageId: "contact",
+      title: 'Contact',
+      type: 1,
+      link: '/testimonials'
+    }];
+    return {
+      about,
+      offer,
+      photoGallery,
+      menu,
+      menuToggle,
+      attractions,
+      pages,
+      images
+    };
+  }
 };
 InMemoryDataService = (0,tslib__WEBPACK_IMPORTED_MODULE_0__.__decorate)([(0,_angular_core__WEBPACK_IMPORTED_MODULE_1__.Injectable)({
   providedIn: 'root'
@@ -1765,7 +1987,7 @@ module.exports = ___CSS_LOADER_EXPORT___.toString();
 /***/ ((module) => {
 
 "use strict";
-module.exports = "<div class=\"container pb-5\" *ngIf=\"about$ | async as header\">\n    <h2> {{ header.title }} </h2>\n    <div class=\"title_offer_after\"></div>\n    <div class=\"row text-center mt-4\">\n        <div class=\"col-md-6\">\n            <p *ngFor=\"let elem of header.description\">{{elem}}</p>\n        </div>\n        <div class=\"col-md-6\">\n            <div class=\"container d-flex justify-content-center\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 col-6\">\n                        <h3>200m</h3>\n                        <p> până pe plajă</p>\n                    </div>\n                    <div class=\"col-md-6 col-6\">\n                        <h3>1500m</h3>\n                        <p>până pe faleza orașului Sulina</p>\n                    </div>\n                </div>\n               \n            </div>\n            <div class=\"border_img p-2\">\n                <img class=\"w-100\" src=\"../../assets/images/green-coffee-house/slide3.jpg\">\n            </div>\n            \n        </div>\n    </div>\n</div>\n\n<carousel *ngIf=\"about$ | async as header\" class=\"w-100\">\n    <slide  *ngFor=\"let elem of header.images\">\n        <img [src]=\"elem\" alt=\"Slide\" class=\"w-100\">\n    </slide>\n</carousel>";
+module.exports = "<div class=\"container pb-5\" *ngIf=\"about$ | async as header\">\n    <h2> {{ header.title }} </h2>\n    <div class=\"title_offer_after\"></div>\n    <div class=\"row text-center mt-4\">\n        <div class=\"col-md-6\">\n            <p *ngFor=\"let elem of header.description\">{{elem}}</p>\n        </div>\n        <div class=\"col-md-6\">\n            <div class=\"container d-flex justify-content-center\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 col-6\">\n                        <h3>200m</h3>\n                        <p> până pe plajă</p>\n                    </div>\n                    <div class=\"col-md-6 col-6\">\n                        <h3>1500m</h3>\n                        <p>până pe faleza orașului Sulina</p>\n                    </div>\n                </div>\n               \n            </div>\n            <div class=\"border_img p-2\">\n                <img class=\"w-100\" src=\"../../assets/images/green-coffee-house/slide3.jpg\">\n            </div>\n        </div>\n    </div>\n</div>\n\n<carousel *ngIf=\"about$ | async as header\" class=\"w-100\">\n    <slide  *ngFor=\"let elem of header.images\">\n        <img [src]=\"elem\" alt=\"Slide\" class=\"w-100\">\n    </slide>\n</carousel>";
 
 /***/ }),
 
