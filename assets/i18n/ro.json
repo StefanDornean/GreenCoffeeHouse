@@ -1,0 +1,25 @@
+{
+    "about": {
+        "distplaja": "până pe plajă",
+        "distfaleza": "până pe faleza orașului Sulina"
+    },
+    "offer": {
+        "title": "Ofertă",
+        "back": "Înapoi",
+        "next": "Înainte",
+        "close": "Închide",
+        "rooms": "Camere",
+        "air": "Aer condiționat",
+        "shower": "Baie cu duș",
+        "sea": "Vedere la mare"
+    },
+    "attractions": {
+        "title": "Atracții"
+    },
+    "contact":{
+        "title": "Contactează-ne",
+        "name": "Nume",
+        "message": "Mesaj",
+        "send": "Trimite"
+    }
+}

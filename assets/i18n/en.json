@@ -1,0 +1,25 @@
+{
+    "about": {
+        "distplaja": "to the beach",
+        "distfaleza": "to the waterfront of the city of Sulina"
+    },
+    "offer": {
+        "title": "Offer",
+        "back": "Back",
+        "next": "Next",
+        "close": "Close",
+        "rooms": "Rooms",
+        "air": "Air conditioning",
+        "shower": "Shower",
+        "sea": "Sea view"
+    },
+    "attractions": {
+        "title": "Attractions"
+    },
+    "contact":{
+        "title": "Contact us",
+        "name": "Name",
+        "message": "Message",
+        "send": "Send"
+    }
+}
